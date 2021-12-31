@@ -2,10 +2,11 @@ from pathlib import Path
 
 from django.test import TestCase, Client
 
-
 TEST_DIR = Path(__file__).parent / Path('test_files')
 
 
+# this case seems incorrect. there's no addresses field in address.xml yet it is expected in test case.
+# also, root is expected in first test case while ignored in second.
 class XMLConversionTestCase(TestCase):
     def setUp(self):
         self.client = Client()
